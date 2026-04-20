@@ -29,3 +29,5 @@ Este proyecto está construido con un enfoque técnico robusto y moderno utiliza
 5. Al terminar de interactuar, presiona el botón inferior **Guardar en PDF** para descargar en instantes de manera elegante tu documento final de la asignatura.
 
 ## Link para prueba en vivo
+
+https://bylev.github.io/Matriz_Costo_Beneficio/
