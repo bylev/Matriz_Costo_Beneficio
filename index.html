@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 3 | Pensamiento Estratégico</title>
+    <meta name="description"
+        content="Matriz personalizada de análisis de costo-beneficio para la administración efectiva del tiempo y actividades.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ══ LANDING SCREEN ══ -->
+    <div class="landing" id="landing">
+        <div class="landing-card">
+            <p class="landing-eyebrow">Proyecto Final &middot; Unidad 3</p>
+            <h1 class="landing-title">Matriz <em>Costo-Beneficio</em></h1>
+            <p class="landing-sub">Administración estratégica del tiempo</p>
+            <button class="landing-btn" id="landing-btn">Ingresar</button>
+        </div>
+    </div>
+
+    <div class="site-wrap hidden" id="site-wrap">
+
+        <!-- Window title bar (styled via CSS ::before / ::after) -->
+
+        <!-- Scallop decorative border inside window -->
+        <div class="scallop-bar">
+            <svg viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path
+                    d="M0,0 Q50,55 100,0 Q150,55 200,0 Q250,55 300,0 Q350,55 400,0 Q450,55 500,0 Q550,55 600,0 Q650,55 700,0 Q750,55 800,0 Q850,55 900,0 Q950,55 1000,0 Q1050,55 1100,0 Q1150,55 1200,0 L1200,60 L0,60 Z"
+                    fill="#a8cc9e" />
+            </svg>
+        </div>
+
+        <div class="window-body">
+
+            <!-- ── HERO ── -->
+            <header class="hero" data-animate>
+                <p class="eyebrow">Proyecto Final · Unidad 3</p>
+                <h1 class="hero-title">.𖥔 ් ˖ ✦ ‧₊˚ ⋅</h1>
+                <h1 class="hero-title">Matriz <em>Costo-Beneficio</em></h1>
+                <p class="hero-lead">Análisis de Costo-Beneficio para la administración estratégica del tiempo.</p>
+
+                <div class="hero-meta">
+                    <div class="meta-card">
+                        <span class="meta-number">4</span>
+                        <span class="meta-label">Cuadrantes de análisis</span>
+                    </div>
+                    <div class="meta-card">
+                        <span class="meta-number">8</span>
+                        <span class="meta-label">Variables evaluadas</span>
+                    </div>
+                    <div class="meta-card">
+                        <span class="meta-number">∞</span>
+                        <span class="meta-label">Actividades posibles</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- ── BANNER IMAGE ── -->
+            <div class="banner-image-wrap" data-animate>
+                <img src="img/progress.jpg" alt="Small steps every day" class="banner-image">
+            </div>
+
+            <hr class="rule">
+
+            <!-- ── FORM ── -->
+            <section class="section" id="sec-form" data-animate>
+                <div class="section-label">Paso 1</div>
+                <h2 class="section-title">Registrar una <em>actividad</em></h2>
+                <p class="section-desc">Evalúa cada variable del 1 al 10. El sistema calculará automáticamente el
+                    cuadrante correspondiente.</p>
+
+                <form id="activity-form" class="form-card" novalidate>
+
+                    <div class="form-field">
+                        <label class="label" for="activity-name">Nombre de la actividad</label>
+                        <input class="input" type="text" id="activity-name"
+                            placeholder="Ej. Estudiar para el examen parcial" required autocomplete="off">
+                    </div>
+
+                    <div class="form-grid">
+
+                        <fieldset class="eval-fieldset cost-fieldset">
+                            <legend class="fieldset-legend">
+                                <span class="legend-indicator cost-indicator"></span>
+                                Costos
+                            </legend>
+                            <p class="fieldset-note">¿Cuánto me cuesta cada factor? (1 = mínimo, 10 = máximo)</p>
+
+                            <div class="slider-item">
+                                <div class="slider-header">
+                                    <label class="slider-label" for="cost-time">Tiempo invertido</label>
+                                    <output class="slider-value" id="val-time">5</output>
+                                </div>
+                                <input type="range" id="cost-time" min="1" max="10" value="5"
+                                    class="slider slider--cost">
+                            </div>
+
+                            <div class="slider-item">
+                                <div class="slider-header">
+                                    <label class="slider-label" for="cost-effort">Esfuerzo y energía</label>
+                                    <output class="slider-value" id="val-effort">5</output>
+                                </div>
+                                <input type="range" id="cost-effort" min="1" max="10" value="5"
+                                    class="slider slider--cost">
+                            </div>
+
+                            <div class="slider-item">
+                                <div class="slider-header">
+                                    <label class="slider-label" for="cost-opportunity">Oportunidades perdidas</label>
+                                    <output class="slider-value" id="val-opportunity">5</output>
+                                </div>
+                                <input type="range" id="cost-opportunity" min="1" max="10" value="5"
+                                    class="slider slider--cost">
+                            </div>
+
+                            <div class="slider-item">
+                                <div class="slider-header">
+                                    <label class="slider-label" for="cost-resources">Recursos adicionales</label>
+                                    <output class="slider-value" id="val-resources">5</output>
+                                </div>
+                                <input type="range" id="cost-resources" min="1" max="10" value="5"
+                                    class="slider slider--cost">
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="eval-fieldset benefit-fieldset">
+                            <legend class="fieldset-legend">
+                                <span class="legend-indicator benefit-indicator"></span>
+                                Beneficios
+                            </legend>
+                            <p class="fieldset-note">¿Cuánto me aporta cada factor? (1 = mínimo, 10 = máximo)</p>
+
+                            <div class="slider-item">
+                                <div class="slider-header">
+                                    <label class="slider-label" for="ben-impact">Impacto en objetivos</label>
+                                    <output class="slider-value slider-value--benefit" id="val-impact">5</output>
+                                </div>
+                                <input type="range" id="ben-impact" min="1" max="10" value="5"
+                                    class="slider slider--benefit">
+                            </div>
+
+                            <div class="slider-item">
+                                <div class="slider-header">
+                                    <label class="slider-label" for="ben-results">Resultados tangibles</label>
+                                    <output class="slider-value slider-value--benefit" id="val-results">5</output>
+                                </div>
+                                <input type="range" id="ben-results" min="1" max="10" value="5"
+                                    class="slider slider--benefit">
+                            </div>
+
+                            <div class="slider-item">
+                                <div class="slider-header">
+                                    <label class="slider-label" for="ben-wellbeing">Bienestar y satisfacción</label>
+                                    <output class="slider-value slider-value--benefit" id="val-wellbeing">5</output>
+                                </div>
+                                <input type="range" id="ben-wellbeing" min="1" max="10" value="5"
+                                    class="slider slider--benefit">
+                            </div>
+
+                            <div class="slider-item">
+                                <div class="slider-header">
+                                    <label class="slider-label" for="ben-longterm">Beneficios a largo plazo</label>
+                                    <output class="slider-value slider-value--benefit" id="val-longterm">5</output>
+                                </div>
+                                <input type="range" id="ben-longterm" min="1" max="10" value="5"
+                                    class="slider slider--benefit">
+                            </div>
+                        </fieldset>
+
+                    </div><!-- /form-grid -->
+
+                    <div class="form-footer">
+                        <div class="score-summary">
+                            <div class="score-pill">
+                                <span class="score-dot cost-dot"></span>
+                                Costo promedio: <strong id="preview-cost">5.0</strong>
+                            </div>
+                            <div class="score-pill">
+                                <span class="score-dot benefit-dot"></span>
+                                Beneficio promedio: <strong id="preview-benefit">5.0</strong>
+                            </div>
+                        </div>
+                        <button type="submit" id="btn-add" class="btn-primary">Registrar actividad</button>
+                    </div>
+
+                </form>
+            </section>
+
+            <hr class="rule">
+
+            <!-- ── MATRIX ── -->
+            <section class="section" id="sec-matrix" data-animate>
+                <div class="section-label">Paso 2</div>
+                <h2 class="section-title">La <em>Matriz</em></h2>
+                <p class="section-desc">Cada punto representa una actividad. Su posición indica la relación entre costo
+                    y beneficio.</p>
+
+                <div class="matrix-layout">
+
+                    <div class="matrix-wrap">
+                        <div class="axis-label axis-label--y">Beneficio &uarr;</div>
+                        <div class="matrix-grid" id="matrix-grid">
+                            <div class="quadrant q1">
+                                <span class="q-name">I. Priorizar</span>
+                                <span class="q-desc">Alto beneficio · Bajo costo</span>
+                            </div>
+                            <div class="quadrant q2">
+                                <span class="q-name">II. Gestionar</span>
+                                <span class="q-desc">Alto beneficio · Alto costo</span>
+                            </div>
+                            <div class="quadrant q3">
+                                <span class="q-name">III. Mantener</span>
+                                <span class="q-desc">Bajo beneficio · Bajo costo</span>
+                            </div>
+                            <div class="quadrant q4">
+                                <span class="q-name">IV. Reconsiderar</span>
+                                <span class="q-desc">Bajo beneficio · Alto costo</span>
+                            </div>
+                            <div id="scatter-plot" class="scatter-plot" aria-live="polite"></div>
+                        </div>
+                        <div class="axis-label axis-label--x">Costo &rarr;</div>
+                    </div>
+
+                    <aside class="activity-panel">
+                        <div class="panel-header">
+                            <h3 class="panel-title">Actividades</h3>
+                            <span class="count-badge" id="activity-count">0</span>
+                        </div>
+                        <div id="activity-list" class="activity-list-grid">
+                            <p class="no-data">Ninguna actividad registrada aún.</p>
+                        </div>
+                    </aside>
+
+                </div>
+            </section>
+
+            <hr class="rule">
+
+            <!-- ── REPORT ── -->
+            <section class="section" id="sec-report" data-animate>
+                <div class="section-label">Paso 3</div>
+                <h2 class="section-title">El <em>Informe</em></h2>
+                <p class="section-desc">Recomendaciones generadas automáticamente con base en tu análisis personalizado.
+                </p>
+
+                <div id="report-content">
+                    <p class="no-data">Registra al menos una actividad para generar el informe.</p>
+                </div>
+
+                <div id="report-actions" style="display:none; margin-top:2rem; text-align:center;">
+                    <button class="btn-secondary" onclick="descargarPDF()">Guardar en PDF</button>
+                </div>
+            </section>
+
+            <footer class="site-footer">
+                <p>Matriz Costo-Beneficio &mdash; Proyecto Final Unidad 3 &middot; Pensamiento Estratégico y Liderazgo
+                    &mdash;
+                    Michelle Cámara González </p>
+            </footer>
+
+        </div><!-- /window-body -->
+
+    </div><!-- /site-wrap -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
